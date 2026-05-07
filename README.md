@@ -88,9 +88,3 @@ Le projet contient :
 
 ```bash
 psql -U postgres -d tarifs_postaux -f postgres.sql
-
----
-
-## 🎥 Démonstration
-
-[Voir la vidéo](demo.mp4)
