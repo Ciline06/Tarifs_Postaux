@@ -87,4 +87,4 @@ Le projet contient :
 ### 1. Importer la base de données
 
 ```bash
-psql -U postgres -d tarifs_postaux -f G02_postgres.sql
+psql -U postgres -d tarifs_postaux -f postgres.sql
