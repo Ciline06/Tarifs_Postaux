@@ -1,0 +1,263 @@
+/* Style général de la page */
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+}
+
+/* Barre du haut */
+.entete {
+    background: #333;
+    color: white;
+    padding: 15px 25px;
+    font-size: 20px;
+}
+
+/* Conteneur principal */
+.contenu {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 15px;
+}
+
+/* Petit conteneur */
+.contenu-small {
+    max-width: 580px;
+    margin: 30px auto;
+    padding: 0 15px;
+}
+
+/* Titres */
+h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+h3 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/* Boites blanches */
+.boite {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 25px;
+    margin-bottom: 20px;
+}
+
+/* Barre des boutons */
+.barre {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+/* Style général des boutons */
+a.btn {
+    display: inline-block;
+    padding: 7px 14px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Couleurs des boutons */
+.btn-retour  { background: #333; color: white; }
+.btn-inserer { background: #2a7a2a; color: white; }
+.btn-detail  { background: #1a5276; color: white; font-size: 12px; padding: 4px 8px; }
+.btn-modif   { background: #7d6608; color: white; font-size: 12px; padding: 4px 8px; }
+.btn-suppr   { background: #922b21; color: white; font-size: 12px; padding: 4px 8px; }
+
+/* Effets au survol */
+.btn-retour:hover  { background: #555; }
+.btn-inserer:hover { background: #1e5c1e; }
+.btn-detail:hover  { background: #154360; }
+.btn-modif:hover   { background: #5d4e08; }
+.btn-suppr:hover   { background: #7b241c; }
+
+/* Conteneur du tableau */
+.tableau-wrap {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+/* Tableau */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Entête du tableau */
+thead {
+    background: #333;
+    color: white;
+}
+
+thead th {
+    padding: 10px 12px;
+    text-align: left;
+    font-size: 13px;
+}
+
+/* Lignes du tableau */
+tbody tr {
+    border-bottom: 1px solid #eee;
+}
+
+/* Effet au survol des lignes */
+tbody tr:hover {
+    background: #f9f9f9;
+}
+
+/* Cellules */
+td {
+    padding: 9px 12px;
+    font-size: 13px;
+}
+
+/* Colonne des actions */
+td.act {
+    white-space: nowrap;
+}
+
+/* Espacement entre boutons */
+td.act a {
+    margin-right: 4px;
+}
+
+/* Texte Oui */
+.vrai {
+    color: green;
+    font-weight: bold;
+}
+
+/* Texte Non */
+.faux {
+    color: red;
+    font-weight: bold;
+}
+
+/* Message vide */
+.vide {
+    text-align: center;
+    padding: 30px;
+    color: #888;
+}
+
+/* Ligne d'un champ */
+.champ {
+    display: flex;
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+/* Supprime la bordure du dernier champ */
+.champ:last-child {
+    border-bottom: none;
+}
+
+/* Nom du champ */
+.nom-champ {
+    font-weight: bold;
+    min-width: 200px;
+    color: #333;
+    font-size: 14px;
+}
+
+/* Valeur du champ */
+.val-champ {
+    color: #444;
+    font-size: 14px;
+}
+
+/* Ligne des tarifs */
+.ligne-tarif {
+    background: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    padding: 8px 12px;
+    margin-bottom: 6px;
+    font-size: 13px;
+}
+
+/* Groupe d'éléments formulaire */
+.groupe {
+    margin-bottom: 15px;
+}
+
+/* Labels */
+label {
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+/* Champs formulaire */
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+    background: white;
+}
+
+/* Champ non modifiable */
+input[readonly] {
+    background: #ebebeb;
+    color: #888;
+    cursor: not-allowed;
+}
+
+/* Effet focus */
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #333;
+}
+
+/* Bouton enregistrer */
+button[type="submit"] {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 9px 20px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Hover bouton enregistrer */
+button[type="submit"]:hover {
+    background: #555;
+}
+
+/* Bouton annuler */
+a.btn-annuler {
+    display: inline-block;
+    background: #922b21;
+    color: white;
+    padding: 9px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Hover bouton annuler */
+a.btn-annuler:hover {
+    background: #7b241c;
+}
