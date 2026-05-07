@@ -49,23 +49,23 @@ CREATE TABLE G02_Tarifer (
 
 -- INSERTIONS TYPE ENVOI
 
-INSERT INTO G02_TypeEnvoi 
+INSERT INTO G02_TypeEnvoi
 (nom_type_envoi, delai_livraison, assurance_possible, fragile, option_tarifaire)
 VALUES
 ('Lettre', 2, FALSE, FALSE, NULL),
 ('Colis', 5, TRUE, TRUE, 'assurance'),
 ('Lettre verte suivie', 3, FALSE, FALSE, 'suivi'),
 ('Chronopost', 1, TRUE, TRUE, 'express'),
-('Colis économique', 8, FALSE, FALSE, NULL),
+('Colis economique', 8, FALSE, FALSE, NULL),
 ('Lettre internationale', 6, FALSE, FALSE, NULL),
 ('Eco courrier', 6, FALSE, FALSE, NULL),
 ('Express 24h', 1, TRUE, TRUE, 'Express rapide'),
 ('Colis standard international', 5, TRUE, TRUE, 'Suivi + assurance'),
 ('Lettre urgente', 1, FALSE, FALSE, 'Prioritaire'),
 ('Colis volumineux', 8, TRUE, TRUE, 'Grand volume'),
-('Transport médical', 2, TRUE, TRUE, 'Température contrôlée'),
-('Envoi économique international', 10, FALSE, FALSE, NULL),
-('Colis fragile renforcé', 4, TRUE, TRUE, 'Protection renforcée');
+('Transport medical', 2, TRUE, TRUE, 'Temperature controlee'),
+('Envoi economique international', 10, FALSE, FALSE, NULL),
+('Colis fragile renforce', 4, TRUE, TRUE, 'Protection renforcee');
 
 
 -- INSERTIONS DESTINATION
@@ -75,25 +75,25 @@ INSERT INTO G02_Destination
 VALUES
 ('France', 'Zone 1', 'FR', 'EUR', NULL),
 ('Algerie', 'Zone 2', 'DZ', 'DZD', 'Poids max 30kg'),
-('États-Unis', 'Zone B', 'US', 'USD', 'Batteries interdites'),
+('Etats-Unis', 'Zone B', 'US', 'USD', 'Batteries interdites'),
 ('Canada', 'Zone B', 'CA', 'CAD', NULL),
 ('Espagne', 'Zone 1', 'ES', 'EUR', NULL),
-('Chine', 'Zone C', 'CN', 'CNY', 'Contrôle strict'),
+('Chine', 'Zone C', 'CN', 'CNY', 'Controle strict'),
 ('Portugal', 'Zone 1', 'PT', 'EUR', NULL),
 ('Pays-Bas', 'Zone 1', 'NL', 'EUR', NULL),
 ('Luxembourg', 'Zone 1', 'LU', 'EUR', NULL),
-('Suède', 'Zone A', 'SE', 'SEK', NULL),
-('Norvège', 'Zone A', 'NO', 'NOK', NULL),
+('Suede', 'Zone A', 'SE', 'SEK', NULL),
+('Norvege', 'Zone A', 'NO', 'NOK', NULL),
 ('Danemark', 'Zone A', 'DK', 'DKK', NULL),
 ('Pologne', 'Zone 1', 'PL', 'PLN', NULL),
-('Turquie', 'Zone B', 'TR', 'TRY', 'Contrôle douanier'),
+('Turquie', 'Zone B', 'TR', 'TRY', 'Controle douanier'),
 ('Inde', 'Zone C', 'IN', 'INR', 'Produits sensibles'),
 ('Afrique du Sud', 'Zone C', 'ZA', 'ZAR', NULL),
 ('Italie', 'Zone 1', 'IT', 'EUR', NULL),
 ('Allemagne', 'Zone 1', 'DE', 'EUR', NULL),
 ('Royaume-Uni', 'Zone A', 'GB', 'GBP', NULL),
 ('Japon', 'Zone C', 'JP', 'JPY', NULL),
-('Brésil', 'Zone C', 'BR', 'BRL', NULL),
+('Bresil', 'Zone C', 'BR', 'BRL', NULL),
 ('Suisse', 'Zone A', 'CH', 'CHF', NULL);
 
 
@@ -101,7 +101,6 @@ VALUES
 
 INSERT INTO G02_Tarifer 
 (id_destination, id_type_envoi, poids_min, poids_max, tarif, date_debut, date_fin)
-
 VALUES
 
 (
@@ -123,7 +122,7 @@ VALUES
 ),
 
 (
-    (SELECT id_destination FROM G02_Destination WHERE nom_destination = 'États-Unis'),
+    (SELECT id_destination FROM G02_Destination WHERE nom_destination = 'Etats-Unis'),
     (SELECT id_type_envoi FROM G02_TypeEnvoi WHERE nom_type_envoi = 'Chronopost'),
     0, 5000, 45.00, '2025-01-01', '2025-12-31'
 ),
@@ -142,6 +141,6 @@ VALUES
 
 (
     (SELECT id_destination FROM G02_Destination WHERE nom_destination = 'Chine'),
-    (SELECT id_type_envoi FROM G02_TypeEnvoi WHERE nom_type_envoi = 'Colis économique'),
+    (SELECT id_type_envoi FROM G02_TypeEnvoi WHERE nom_type_envoi = 'Colis economique'),
     0, 20000, 22.00, '2025-01-01', '2025-12-31'
 );
